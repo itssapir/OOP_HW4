@@ -77,6 +77,7 @@ public class ColorGenerator extends ColorSubject {
 	 * @modifies this
 	 * @effects if ColorGenerator never created before: create a new instance of ColorGenerator, and update that was created
 	 * 			and in any case return instance of the unique ColorGenerator object.
+	 * @return system instance of color generator
 	 */	
 	static public ColorGenerator getInstance() {
 		// Singleton
