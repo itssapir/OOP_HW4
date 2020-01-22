@@ -21,5 +21,8 @@ public class Panel implements ColorObserver {
 		panel.setBackground(newCol);
 		panel.paintImmediately(panel.getVisibleRect());
 	}
-
+	
+	public JPanel getJpanel() {
+		return panel;
+	}
 }

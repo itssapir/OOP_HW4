@@ -13,6 +13,8 @@ public class ColorGenerator extends ColorSubject {
 	private UpdateStrategy strategy;
 
 	private ColorGenerator() {
+		//set strategy default value
+		strategy = new OrderedUpdate();
 		// start with default color
 		Random rand = new Random();
 		color = new Color(rand.nextInt());
