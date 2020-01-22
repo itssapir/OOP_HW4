@@ -6,6 +6,8 @@ import java.util.List;
 
 public class RandomUpdate implements UpdateStrategy {
 
+	static final int UPDATEDELAYTIME = 40; // ms 
+
 	@Override
 	public void update(ArrayList<ColorObserver> observers) {
 		// TODO Auto-generated method stub
@@ -13,6 +15,10 @@ public class RandomUpdate implements UpdateStrategy {
 		Collections.shuffle(randList);
 		for (ColorObserver observer : randList) {
 			observer.colorChanged();
+			try {
+				Thread.sleep(UPDATEDELAYTIME);
+			} catch (InterruptedException e) {
+			}
 		}
 	}
 

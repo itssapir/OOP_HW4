@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class ColumnUpdate implements UpdateStrategy {
 	
+	static final int UPDATEDELAYTIME = 40; // ms 
 	static final int BOARDSIZE = 5;
 
 	@Override
@@ -12,6 +13,10 @@ public class ColumnUpdate implements UpdateStrategy {
 		for (int row = 0; row < BOARDSIZE; ++row) {
 			for (int col = 0; col < BOARDSIZE; ++col) {
 				(observers.get(row + BOARDSIZE*col)).colorChanged();				
+				try {
+					Thread.sleep(UPDATEDELAYTIME);
+				} catch (InterruptedException e) {
+				}
 			}
 		}
 	}
