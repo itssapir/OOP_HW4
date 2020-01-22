@@ -154,8 +154,8 @@ public class Billboard extends JFrame implements ActionListener {
 				 (RandomStrat != null) )	: "Billboard missing a strategy object";
 		assert (menuBar.getMenu(0) == strategyMenu) : "Billboard menu bar is missing a strategy menu";
 		assert (strategyMenu.getItem(0) == AscendingStrat) : "Billboard strategy menu missing ascending strat";
-		assert (strategyMenu.getItem(0) == ColumnStrat) : "Billboard strategy menu missing column strat";
-		assert (strategyMenu.getItem(0) == OddEvenStrat) : "Billboard strategy menu missing odd-even strat";
-		assert (strategyMenu.getItem(0) == RandomStrat) : "Billboard strategy menu missing random strat";
+		assert (strategyMenu.getItem(1) == ColumnStrat) : "Billboard strategy menu missing column strat";
+		assert (strategyMenu.getItem(2) == OddEvenStrat) : "Billboard strategy menu missing odd-even strat";
+		assert (strategyMenu.getItem(3) == RandomStrat) : "Billboard strategy menu missing random strat";
 	}
 }

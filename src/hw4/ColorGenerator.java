@@ -44,7 +44,6 @@ public class ColorGenerator extends ColorSubject {
 					newCol = new Color(rand.nextInt());
 				} while (newCol.equals(color));
 				color = newCol;
-				System.out.println("ColorGenerator.color = " + color);
 				notifyAllObservers();
             }
         });
