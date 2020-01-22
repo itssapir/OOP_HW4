@@ -18,8 +18,10 @@ public class OddEvenUpdate implements UpdateStrategy {
 
 	static final int UPDATEDELAYTIME = 40; // ms 
 
-	// notify all observers about the color change
-	// first notify odd numbered panels, and then even
+	/**
+	 * @effects notify all observers about a change in the subject.
+	 * 			first notifies odd numbered panels, and then even
+	 */
 	@Override
 	public void update(ArrayList<ColorObserver> observers) {
 		for (int i = 0; i < 2; ++i) {

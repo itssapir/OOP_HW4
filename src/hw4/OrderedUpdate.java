@@ -18,8 +18,10 @@ public class OrderedUpdate implements UpdateStrategy {
 
 	static final int UPDATEDELAYTIME = 40; // ms 
 
-	// notify all observers about the color change
-	// do it in a row order
+	/**
+	 * @effects notify all observers about a change in the subject.
+	 * 			does so in a row order
+	 */
 	@Override
 	public void update(ArrayList<ColorObserver> observers) {
 		for (int i = 0; i < observers.size(); ++i) {

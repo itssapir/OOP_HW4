@@ -19,8 +19,10 @@ public class ColumnUpdate implements UpdateStrategy {
 	static final int UPDATEDELAYTIME = 40; // ms 
 	static final int BOARDSIZE = 5;
 
-	// notify all observers about the color change
-	// do it in a column order
+	/**
+	 * @effects notify all observers about a change in the subject.
+	 * 			does so in a column order.
+	 */
 	@Override
 	public void update(ArrayList<ColorObserver> observers) {
 		for (int row = 0; row < BOARDSIZE; ++row) {

@@ -20,8 +20,10 @@ public class RandomUpdate implements UpdateStrategy {
 	
 	static final int UPDATEDELAYTIME = 40; // ms 
 
-	// notify all observers about the color change
-	// do it in a random order
+	/**
+	 * @effects notify all observers about a change in the subject.
+	 * 			does so in a random order
+	 */
 	@Override
 	public void update(ArrayList<ColorObserver> observers) {
 		List<ColorObserver> randList = new ArrayList<>(observers);

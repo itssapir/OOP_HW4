@@ -6,8 +6,10 @@ import javax.swing.JPanel;
 
 /*
  * Represents a panel in the system.
- * each panel represents a panel in the systems GUI, and will display a color based
- * on the color that is broadcast in the system by the color generator.
+ * each panel represents a panel in the systems GUI.
+ * The panel is an observer of a color producer, and will display a color based
+ * on the color that is set by that producer
+ * 
  */
 public class Panel implements ColorObserver {
 
@@ -20,7 +22,10 @@ public class Panel implements ColorObserver {
 
 	private JPanel panel;
 	
-	// create the panel, starting with background color "color"
+	/**
+	 * @modifies this
+	 * @effects create the panel, starting with background color "color"
+	 */
 	public Panel(Color color) {
 		panel = new JPanel();
 		panel.setBackground(color);
@@ -28,8 +33,11 @@ public class Panel implements ColorObserver {
 		checkRep();
 	}
 
-	// receive a notice from the color generator telling us that the color has changed
-	// change the background color to fit the new color
+	/**
+	 * @modifies this
+	 * @effects receive a notice from the color generator telling us that the color has changed.
+	 * 			change the background color to fit the new color.
+	 */
 	@Override
 	public void colorChanged() {
 		checkRep();
@@ -40,6 +48,9 @@ public class Panel implements ColorObserver {
 		checkRep();
 	}
 	
+	/**
+	 * @return JPanel of this Panel
+	 */
 	public JPanel getJpanel() {
 		checkRep();
 		return panel;

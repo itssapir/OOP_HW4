@@ -7,5 +7,10 @@ import java.util.ArrayList;
  * e.g. In row order, column order, random, etc.
  */
 public interface UpdateStrategy {
+
+	/**
+	 * @effects notify all observers about a change in the subject.
+	 * 			does so in a specific strategy.
+	 */
 	public void update(ArrayList<ColorObserver> observers);
 }
