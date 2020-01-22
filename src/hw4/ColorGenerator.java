@@ -10,7 +10,6 @@ import javax.swing.*;
 public class ColorGenerator extends ColorSubject {
 
 	static private ColorGenerator inst = null;
-	private Color color;
 	private UpdateStrategy strategy;
 
 	private ColorGenerator() {
@@ -25,8 +24,9 @@ public class ColorGenerator extends ColorSubject {
             	Color newCol;
 				do {
 					newCol = new Color(rand.nextInt());
-				} while (!newCol.equals(color));
+				} while (newCol.equals(color));
 				color = newCol;
+				System.out.println("ColorGenerator.color = " + color);
 				notifyAllObservers();
             }
         });
