@@ -2,22 +2,24 @@ package hw4;
 
 import java.awt.Color;
 
+import javax.swing.JPanel;
+
 public class Panel implements ColorObserver {
 
-	Color panelColor;
-	int id; // TODO: remove id from this class
+	private JPanel panel;
 	
-	public Panel(Color color, int id) {
-		panelColor = color;
-		this.id = id;
+	public Panel(Color color) {
+		panel = new JPanel();
+		panel.setBackground(color);
+		panel.paintImmediately(panel.getVisibleRect());
 	}
 
 	@Override
 	public void colorChanged() {
 		ColorSubject colorGen = ColorGenerator.getInstance();
-		panelColor = colorGen.getColor();
-		System.out.println("Panel number " + id + " is color " + panelColor);
+		Color newCol = colorGen.getColor();
+		panel.setBackground(newCol);
+		panel.paintImmediately(panel.getVisibleRect());
 	}
 
-	// TODO: GUI stuff
 }
