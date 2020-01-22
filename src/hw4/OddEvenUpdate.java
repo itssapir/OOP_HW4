@@ -7,6 +7,11 @@ public class OddEvenUpdate implements UpdateStrategy {
 	@Override
 	public void update(ArrayList<ColorObserver> observers) {
 		// TODO Auto-generated method stub
+		for (int i = 0; i < 2; ++i) {
+			for (int j = 0; (j + i) < observers.size(); j += 2) {
+				(observers.get(j + i)).colorChanged();
+			}
+		}
 		
 	}
 
