@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"hw4","l":"Billboard"},{"p":"hw4","l":"ColorGenerator"},{"p":"hw4","l":"ColorObserver"},{"p":"hw4","l":"ColorSubject"},{"p":"hw4","l":"ColumnUpdate"},{"p":"hw4","l":"OddEvenUpdate"},{"p":"hw4","l":"OrderedUpdate"},{"p":"hw4","l":"Panel"},{"p":"hw4","l":"RandomUpdate"},{"p":"hw4","l":"UpdateStrategy"}]
